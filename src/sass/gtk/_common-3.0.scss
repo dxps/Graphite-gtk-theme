@@ -1647,7 +1647,9 @@ menu,
     border: 1px solid $solid-border;
     box-shadow: inset 0 1px highlight($surface);
   } @else {
-    border: 2px solid $primary;
+    // dxps
+    // border: 2px solid $primary;
+    border: 2px solid #585858;
   }
 
   .csd & { border: none; }
@@ -1758,7 +1760,9 @@ popover.background {
       box-shadow: $shadow-z4;
       &:backdrop { box-shadow: $shadow-z2; }
     } @else {
-      border: 2px solid $primary;
+      // dxps
+      // border: 2px solid $primary;
+      border: 2px solid #585858;
       box-shadow: none;
     }
   }
@@ -3611,7 +3615,9 @@ decoration {
   } @else {
     border-radius: $window-radius + 2px;
     box-shadow: $shadow-z4, 0 0 16px transparent;
-    border: 2px solid $primary;
+    // dxps
+    // border: 2px solid $primary;
+    border: 2px solid #585858;
     background-clip: border-box;
   }
 
@@ -3630,7 +3636,9 @@ decoration {
       box-shadow: $shadow-z4, 0 0 36px transparent;
     } @else {
       box-shadow: $shadow-z1, 0 0 16px transparent;
-      border: 2px solid $primary;
+      // dxps
+      // border: 2px solid $primary;
+      border: 2px solid #444444;
       background-clip: border-box;
     }
   }
@@ -3663,7 +3671,9 @@ decoration {
       box-shadow: $shadow-z4;
     } @else {
       border-radius: $menu-radius + 2px;
-      border: 2px solid $primary;
+      // dxps
+      // border: 2px solid $primary;
+      border: 2px solid #585858;
       background-clip: border-box;
     }
   }
@@ -3689,7 +3699,9 @@ decoration {
     @if $rimless == 'true' {
       border: 1px solid $solid-border;
     } @else {
-      border: 2px solid $primary;
+      // dxps
+      // border: 2px solid $primary;
+      border: 2px solid #585858;
     }
 
     &:backdrop { background-color: $titlebar-backdrop; }

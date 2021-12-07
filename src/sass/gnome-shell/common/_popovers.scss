@@ -29,7 +29,9 @@
     font-weight: normal;
 
     @if $rimless == 'false' {
-      border: 2px solid $primary;
+      // dxps
+      // border: 2px solid $primary;
+      border: 2px solid #585858;
     }
   }
 

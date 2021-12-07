@@ -2043,7 +2043,9 @@ window.background.csd.unified {
 
     @if $rimless == 'false' {
       @if $topbar == 'dark' and $variant == 'light' {
-        border: 2px solid $primary;
+        // dxps
+        // border: 2px solid $primary;
+        border: 2px solid #585858;
       } @else {
         border: none;
         box-shadow: $shadow-z4, 0 0 0 2px $primary, 0 0 16px transparent;

@@ -386,7 +386,7 @@ install_package() {
 }
 
 tweaks_temp() {
-  cp -rf ${SRC_DIR}/sass/_tweaks.scss ${SRC_DIR}/sass/_tweaks-temp.scss
+  cp -f ${SRC_DIR}/sass/_tweaks.scss ${SRC_DIR}/sass/_tweaks-temp.scss
 }
 
 compact_size() {
