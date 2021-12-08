@@ -1628,7 +1628,7 @@ popover.menu {
     } @else {
       // dxps
       // border: 2px solid $primary;
-      border: 2px solid #585858;
+      border: 1px solid #696969;
     }
   }
 
@@ -1700,7 +1700,7 @@ popover.background {
     } @else {
       // dxps
       // border: 2px solid $primary;
-      border: 2px solid #585858;
+      border: 1px solid #696969;
     }
   }
 
@@ -1713,7 +1713,7 @@ popover.background {
       } @else {
         // dxps
         // border: 2px solid $primary;
-        border: 2px solid #585858;
+        border: 1px solid #696969;
       }
     }
   }
@@ -3705,7 +3705,7 @@ window {
       } @else {
         // dxps
         // border: 2px solid $primary;
-        border: 2px solid #444444;
+        border: 1px solid #444444;
       }
 
       &:backdrop { background-color: $titlebar-backdrop; }

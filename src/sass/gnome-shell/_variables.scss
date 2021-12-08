@@ -7,7 +7,7 @@ $asset_suffix: if($variant == 'dark', '-dark', '');
 $item_size: if($compact == 'false', 32px, 28px);
 // dxps
 // $font_size: if($compact == 'false', 11, 10);
-$font_size: 11;
+$font_size: 12;
 
 // padding, margin and spacing
 $base_padding: if($compact == 'false', 6px, 4px);
@@ -16,8 +16,10 @@ $base_spacing: if($compact == 'false', 6px, 4px);
 
 // radiuses
 $circular_radius: 9999px;
-$base_radius: 6px;
-$window_radius: 12px;
+// $base_radius: 6px; dxps
+$base_radius: 8px;
+// $window_radius: 12px; dxps
+$window_radius: 8px;
 $menu_radius: $base_radius + $base_padding;
 $modal_radius: $menu_radius;
 

@@ -1649,7 +1649,7 @@ menu,
   } @else {
     // dxps
     // border: 2px solid $primary;
-    border: 2px solid #585858;
+    border: 1px solid #696969;
   }
 
   .csd & { border: none; }
@@ -1762,7 +1762,7 @@ popover.background {
     } @else {
       // dxps
       // border: 2px solid $primary;
-      border: 2px solid #585858;
+      border: 1px solid #696969;
       box-shadow: none;
     }
   }
@@ -3617,7 +3617,7 @@ decoration {
     box-shadow: $shadow-z4, 0 0 16px transparent;
     // dxps
     // border: 2px solid $primary;
-    border: 2px solid #585858;
+    border: 1px solid #696969;
     background-clip: border-box;
   }
 
@@ -3638,7 +3638,7 @@ decoration {
       box-shadow: $shadow-z1, 0 0 16px transparent;
       // dxps
       // border: 2px solid $primary;
-      border: 2px solid #444444;
+      border: 1px solid #444444;
       background-clip: border-box;
     }
   }
@@ -3673,7 +3673,7 @@ decoration {
       border-radius: $menu-radius + 2px;
       // dxps
       // border: 2px solid $primary;
-      border: 2px solid #585858;
+      border: 1px solid #696969;
       background-clip: border-box;
     }
   }
@@ -3701,7 +3701,7 @@ decoration {
     } @else {
       // dxps
       // border: 2px solid $primary;
-      border: 2px solid #585858;
+      border: 1px solid #696969;
     }
 
     &:backdrop { background-color: $titlebar-backdrop; }

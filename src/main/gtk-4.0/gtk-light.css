@@ -653,7 +653,7 @@ popover.menu box.circular-buttons button.circular.image-button.model { padding: 
 
 popover.menu box.circular-buttons button.circular.image-button.model:focus { background-color: alpha(currentColor, 0.06); }
 
-popover.menu > arrow, popover.menu.background > contents { padding: 4px; background-color: #FFFFFF; background-clip: border-box; border-radius: 10px; border: 2px solid #585858; }
+popover.menu > arrow, popover.menu.background > contents { padding: 4px; background-color: #FFFFFF; background-clip: border-box; border-radius: 10px; border: 1px solid #696969; }
 
 popover.menu.background separator { margin: 4px 0; }
 
@@ -674,9 +674,9 @@ popover.background { font: initial; }
 
 popover.background, popover.background:backdrop { background-color: transparent; }
 
-popover.background > arrow, popover.background > contents { transition: box-shadow 75ms cubic-bezier(0, 0, 0.2, 1); padding: 4px; background-color: #FFFFFF; border-radius: 6px; border: 2px solid #585858; }
+popover.background > arrow, popover.background > contents { transition: box-shadow 75ms cubic-bezier(0, 0, 0.2, 1); padding: 4px; background-color: #FFFFFF; border-radius: 6px; border: 1px solid #696969; }
 
-popover.background:backdrop > arrow, popover.background:backdrop > contents { border: 2px solid #585858; }
+popover.background:backdrop > arrow, popover.background:backdrop > contents { border: 1px solid #696969; }
 
 popover.background > contents > list, popover.background > contents > .view, popover.background > contents > toolbar { border-style: none; box-shadow: none; background-color: transparent; }
 
@@ -1510,7 +1510,7 @@ window.csd.popup { border-radius: 10px; box-shadow: none; }
 
 window.csd.dialog.message { border-radius: 12px; }
 
-.solid-csd window.csd { margin: 0; padding: 2px; border-radius: 0; background-color: #FFFFFF; border: 2px solid #444444; }
+.solid-csd window.csd { margin: 0; padding: 2px; border-radius: 0; background-color: #FFFFFF; border: 1px solid #444444; }
 
 .solid-csd window.csd:backdrop { background-color: #FFFFFF; }
 
