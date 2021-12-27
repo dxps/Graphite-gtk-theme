@@ -2357,7 +2357,7 @@ frame.documents-dropdown, .app-notification, toolbar.osd {
 }
 
 frame.documents-dropdown:backdrop, .app-notification:backdrop, toolbar.osd:backdrop {
-  box-shadow: 0 3px 2px -13px rgba(0, 0, 0, 0.3), 0 2px 2px -11px rgba(0, 0, 0, 0.24), 0 1px 3px 0 rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0);
+  box-shadow: 0 3px 2px -10px rgba(0, 0, 0, 0.3), 0 2px 2px -9px rgba(0, 0, 0, 0.24), 0 1px 3px 0 rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0);
 }
 
 frame.left.documents-dropdown, .left.app-notification, frame.right.documents-dropdown, .right.app-notification, frame.top.documents-dropdown, .top.app-notification, frame.bottom.documents-dropdown, .bottom.app-notification, toolbar.osd.left, toolbar.osd.right, toolbar.osd.top, toolbar.osd.bottom {
@@ -5141,7 +5141,7 @@ colorchooser .popover.osd {
 }
 
 colorchooser .popover.osd:backdrop {
-  box-shadow: 0 3px 2px -13px rgba(0, 0, 0, 0.3), 0 2px 2px -11px rgba(0, 0, 0, 0.24), 0 1px 3px 0 rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0);
+  box-shadow: 0 3px 2px -10px rgba(0, 0, 0, 0.3), 0 2px 2px -9px rgba(0, 0, 0, 0.24), 0 1px 3px 0 rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0);
 }
 
 /********
@@ -5164,7 +5164,7 @@ decoration {
 }
 
 decoration:backdrop {
-  box-shadow: 0 6px 6px -16px rgba(0, 0, 0, 0.4), 0 4px 6px -14px rgba(0, 0, 0, 0.34), 0 4px 6px -0.8px rgba(0, 0, 0, 0.27), 0 0 16px transparent;
+  box-shadow: 0 6px 6px -8px rgba(0, 0, 0, 0.4), 0 4px 6px -6px rgba(0, 0, 0, 0.34), 0 4px 6px -0.8px rgba(0, 0, 0, 0.27), 0 0 16px transparent;
   border: 2px solid #333333;
   background-clip: border-box;
 }
@@ -7137,7 +7137,7 @@ window.background.csd.unified.fullscreen > decoration-overlay {
  *********/
 overlay > revealer.left > scrolledwindow.frame, overlay > revealer.right > scrolledwindow.frame {
   border-style: none;
-  box-shadow: 0 8px 6px -15px rgba(0, 0, 0, 0.4), 0 16px 14.4px 20px rgba(0, 0, 0, 0.34), 0 6px 18px 15px rgba(0, 0, 0, 0.32);
+  box-shadow: 0 8px 6px -8px rgba(0, 0, 0, 0.4), 0 16px 14.4px 4px rgba(0, 0, 0, 0.34), 0 6px 18px 8px rgba(0, 0, 0, 0.32);
 }
 
 overlay > revealer.left > scrolledwindow.frame {
@@ -7520,7 +7520,7 @@ UnityDecoration .menuitem:hover {
 
 .background:not(.csd) headerbar:not(.titlebar) {
   border-radius: 0;
-  box-shadow: 0 6px 6px -16px rgba(0, 0, 0, 0.4), 0 4px 6px -14px rgba(0, 0, 0, 0.34), 0 4px 6px -0.8px rgba(0, 0, 0, 0.27);
+  box-shadow: 0 6px 6px -8px rgba(0, 0, 0, 0.4), 0 4px 6px -6px rgba(0, 0, 0, 0.34), 0 4px 6px -0.8px rgba(0, 0, 0, 0.27);
 }
 
 .background:not(.csd) headerbar:not(.titlebar).inline-toolbar {
@@ -8494,7 +8494,7 @@ frame.raven-frame > border {
 
 .raven {
   background-color: #FFFFFF;
-  box-shadow: 0 8px 6px -15px rgba(0, 0, 0, 0.4), 0 16px 14.4px 20px rgba(0, 0, 0, 0.34), 0 6px 18px 15px rgba(0, 0, 0, 0.32);
+  box-shadow: 0 8px 6px -8px rgba(0, 0, 0, 0.4), 0 16px 14.4px 4px rgba(0, 0, 0, 0.34), 0 6px 18px 8px rgba(0, 0, 0, 0.32);
 }
 
 .raven > box {
