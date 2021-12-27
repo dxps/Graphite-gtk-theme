@@ -3,13 +3,11 @@
 %theme_dialogs {
   background-color: $popover;
   border-radius: $modal_radius;
-  box-shadow: 3px 3px 8px -5px rgba(black, 0.35);
+  box-shadow: 8px 8px 16px -13px rgba(black, 0.35);
   margin: 15px;
 
   @if $rimless == 'false' {
-    // dxps
-    // border: 2px solid $primary;
-    border: 1px solid #585858;
+    border: 2px solid $primary;
   } @else {
     border: none;
   }

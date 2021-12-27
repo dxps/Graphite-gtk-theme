@@ -2043,19 +2043,13 @@ window.background.csd.unified {
 
     @if $rimless == 'false' {
       @if $topbar == 'dark' and $variant == 'light' {
-        // dxps
-        // border: 2px solid $primary;
-        border: 1px solid #696969;
+        border: 2px solid $primary;
       } @else {
         border: none;
-        // dxps
-        // box-shadow: $shadow-z4, 0 0 0 2px $primary, 0 0 16px transparent;
-        box-shadow: $shadow-z4, 0 0 0 1px $dxps_border_active_color, 0 0 32px transparent;
+        box-shadow: $shadow-z4, 0 0 0 2px $primary, 0 0 16px transparent;
 
         &:backdrop {
-          // dxps
-          // box-shadow: $shadow-z1, 0 0 0 2px $primary, 0 0 16px transparent;
-          box-shadow: $shadow-z1, 0 0 0 1px $dxps_border_active_color, 0 0 32px transparent;
+          box-shadow: $shadow-z1, 0 0 0 2px $primary, 0 0 16px transparent;
         }
       }
     }

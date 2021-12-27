@@ -1626,9 +1626,7 @@ popover.menu {
       border: none;
       box-shadow: inset 0 1px highlight($surface), $shadow-z4;
     } @else {
-      // dxps
-      // border: 2px solid $primary;
-      border: 1px solid #696969;
+      border: 2px solid $primary;
     }
   }
 
@@ -1698,9 +1696,7 @@ popover.background {
       border: none;
       box-shadow: $shadow-z4;
     } @else {
-      // dxps
-      // border: 2px solid $primary;
-      border: 1px solid #696969;
+      border: 2px solid $primary;
     }
   }
 
@@ -1711,9 +1707,7 @@ popover.background {
         border: none;
         box-shadow: $shadow-z2;
       } @else {
-        // dxps
-        // border: 2px solid $primary;
-        border: 1px solid #696969;
+        border: 2px solid $primary;
       }
     }
   }
@@ -3703,9 +3697,7 @@ window {
       @if $rimless == 'true' {
         border: 1px solid $solid-border;
       } @else {
-        // dxps
-        // border: 2px solid $primary;
-        border: 1px solid #444444;
+        border: 2px solid $primary;
       }
 
       &:backdrop { background-color: $titlebar-backdrop; }
