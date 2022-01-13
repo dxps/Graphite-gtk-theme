@@ -1777,7 +1777,7 @@ window.background > box.vertical > toolbar.primary-toolbar > toolitem > .linked 
 window.csd > box.vertical > box.vertical > toolbar.horizontal > toolitem > box.horizontal > button,
 window.solid-csd > box.vertical > box.vertical > toolbar.horizontal > toolitem > .linked > button,
 window.solid-csd > box.vertical > box.vertical > toolbar.horizontal > toolitem > box.horizontal > button, .nautilus-window headerbar revealer > button, button.titlebutton:not(.suggested-action):not(.destructive-action), filechooser #pathbarbox > stack > box > button, check,
-radio, button.close, button.circular, .inline-toolbar button:not(.text-button), button.image-button:not(.destructive-action) {
+radio, button.close, button.circular, .inline-toolbar button:not(.text-button), button.image-button {
   border-radius: 9999px;
 }
 
@@ -1786,7 +1786,7 @@ window.background > box.vertical > toolbar.primary-toolbar > toolitem > .linked 
 window.csd > box.vertical > box.vertical > toolbar.horizontal > toolitem > box.horizontal > button label,
 window.solid-csd > box.vertical > box.vertical > toolbar.horizontal > toolitem > .linked > button label,
 window.solid-csd > box.vertical > box.vertical > toolbar.horizontal > toolitem > box.horizontal > button label, .nautilus-window headerbar revealer > button label, button.titlebutton:not(.suggested-action):not(.destructive-action) label, filechooser #pathbarbox > stack > box > button label, check label,
-radio label, button.close label, button.circular label, .inline-toolbar button:not(.text-button) label, button.image-button:not(.destructive-action) label {
+radio label, button.close label, button.circular label, .inline-toolbar button:not(.text-button) label, button.image-button label {
   padding: 0;
 }
 
@@ -1912,6 +1912,10 @@ button.text-button.flat {
 button.image-button {
   min-width: 24px;
   padding: 6px;
+}
+
+button.image-button.destructive-action {
+  border-radius: 6px;
 }
 
 button.text-button.image-button {
@@ -2651,11 +2655,6 @@ searchbar > revealer > box {
   border-radius: 0;
 }
 
-.titlebar > box.left,
-.titlebar > box.right {
-  padding: 0 3px;
-}
-
 .titlebar.default-decoration {
   min-height: 24px;
   padding: 6px;
@@ -2694,6 +2693,11 @@ headerbar:not(.titlebar) {
 
 box.vertical headerbar {
   background-color: #2C2C2C;
+}
+
+headerbar > box.left,
+headerbar > box.right {
+  padding: 0 3px;
 }
 
 headerbar entry,
@@ -4420,52 +4424,6 @@ overshoot.right {
   box-shadow: none;
 }
 
-undershoot.top {
-  background-color: transparent;
-  background-image: linear-gradient(to left, transparent 50%, rgba(0, 0, 0, 0.26) 50%);
-  padding-top: 1px;
-  background-size: 12px 1px;
-  background-repeat: repeat-x;
-  background-origin: content-box;
-  background-position: left top;
-  margin: 0 4px;
-}
-
-undershoot.bottom {
-  background-color: transparent;
-  background-image: linear-gradient(to left, transparent 50%, rgba(0, 0, 0, 0.26) 50%);
-  padding-bottom: 1px;
-  background-size: 12px 1px;
-  background-repeat: repeat-x;
-  background-origin: content-box;
-  background-position: left bottom;
-  margin: 0 4px;
-}
-
-undershoot.left {
-  background-color: transparent;
-  background-image: linear-gradient(to top, transparent 50%, rgba(0, 0, 0, 0.26) 50%);
-  padding-left: 1px;
-  background-size: 1px 12px;
-  background-repeat: repeat-y;
-  background-origin: content-box;
-  background-position: left top;
-  margin: 0 4px;
-  margin: 4px 0;
-}
-
-undershoot.right {
-  background-color: transparent;
-  background-image: linear-gradient(to top, transparent 50%, rgba(0, 0, 0, 0.26) 50%);
-  padding-right: 1px;
-  background-size: 1px 12px;
-  background-repeat: repeat-y;
-  background-origin: content-box;
-  background-position: right top;
-  margin: 0 4px;
-  margin: 4px 0;
-}
-
 junction {
   border-style: solid none none solid;
   border-width: 1px;
@@ -4600,7 +4558,7 @@ expander title > arrow:disabled {
  * Calendar *
  ************/
 calendar {
-  padding: 1px;
+  padding: 3px 6px;
   border: 1px solid rgba(0, 0, 0, 0.12);
   color: rgba(0, 0, 0, 0.87);
 }
@@ -4610,13 +4568,17 @@ calendar:disabled {
 }
 
 calendar:selected {
-  border-radius: 7px;
+  border-radius: 6px;
 }
 
 calendar.header {
   border-style: none none solid;
   border-color: rgba(0, 0, 0, 0.12);
   border-radius: 0;
+}
+
+calendar.button {
+  border-radius: 6px;
 }
 
 calendar.highlight {
@@ -5281,9 +5243,9 @@ cursor-handle.insertion-cursor:dir(ltr), cursor-handle.insertion-cursor:dir(rtl)
 
 stackswitcher {
   min-height: 0;
+  border-radius: 9999px;
   padding: 2px;
   margin: 6px 0;
-  border-radius: 9999px;
   background-color: transparent;
   border: 2px solid #DDDDDD;
 }
@@ -5458,20 +5420,18 @@ popover.emoji-completion .emoji:hover {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.nautilus-window.background.csd placessidebar > viewport.frame > list > separator {
-  background: none;
-}
-
 .nautilus-window.background.csd placessidebar scrollbar {
   background: none;
   border: none;
 }
 
-.nautilus-window.background.csd placessidebar > undershoot.top {
+.nautilus-window.background.csd paned > separator {
   background: none;
 }
 
-.nautilus-window.background.csd placessidebar > undershoot.bottom {
+.nautilus-window.background.csd paned > separator.wide {
+  min-width: 0;
+  min-height: 0;
   background: none;
 }
 
@@ -5544,16 +5504,6 @@ popover.emoji-completion .emoji:hover {
 
 .nautilus-window.background.csd notebook placesview > actionbar > revealer > box {
   background-color: transparent;
-}
-
-.nautilus-window.background.csd paned > separator {
-  background: none;
-}
-
-.nautilus-window.background.csd paned > separator.wide {
-  min-width: 0;
-  min-height: 0;
-  background: none;
 }
 
 .nautilus-window.maximized, .nautilus-window.maximized placessidebar {
@@ -6126,14 +6076,11 @@ window.background.csd scrolledwindow.contacts-contact-form {
  * Epiphany (Gnome Web) *
  ************************/
 tabbox {
-  background-color: #FFFFFF;
-  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.12);
-  padding: 3px 3px 0;
-}
-
-tabbox > tab {
-  border-radius: 6px 6px 0 0;
-  border-bottom: none;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.04);
+  padding: 3px;
+  margin: 3px;
+  border-radius: 9px;
 }
 
 tabbox > tab button {

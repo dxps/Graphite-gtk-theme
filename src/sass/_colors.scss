@@ -48,8 +48,8 @@
 @function theme($color) {
   @if ($color_type == 'nord') {
     @if ($theme == 'default') {
-      @if ($variant == 'light') { @return #3b4252; }
-      @else { @return #e5e9f0; }
+      @if ($variant == 'light') { @return #434c5e; }
+      @else { @return #dbdee5; }
     }
     @if ($theme == 'purple') { @return #b57daa; }
     @if ($theme == 'pink') { @return #cd7092; }
@@ -86,14 +86,14 @@
 
 @function background($type) {
   @if ($color_type == 'nord') {
-    @if ($type == 'a') { @return #ffffff; }
-    @if ($type == 'b') { @return #eceff4; }
-    @if ($type == 'c') { @return #e5e9f0; }
-    @if ($type == 'd') { @return #d8dee9; }
-    @if ($type == 'e') { @return #2e3440; }
-    @if ($type == 'f') { @return #3b4252; }
-    @if ($type == 'g') { @return #434c5e; }
-    @if ($type == 'h') { @return #4c566a; }
+    @if ($type == 'a') { @return #f9fafb; }
+    @if ($type == 'b') { @return #f3f4f6; }
+    @if ($type == 'c') { @return #f0f1f4; }
+    @if ($type == 'd') { @return #c4c9d4; }
+    @if ($type == 'e') { @return #1c1f26; }
+    @if ($type == 'f') { @return #1e222a; }
+    @if ($type == 'g') { @return #252a33; }
+    @if ($type == 'h') { @return #333a47; }
   }
   @if ($color_type == 'blackness') {
     @if ($type == 'a') { @return #FFFFFF; }
@@ -104,6 +104,16 @@
     @if ($type == 'f') { @return #030303; }
     @if ($type == 'g') { @return #0F0F0F; }
     @if ($type == 'h') { @return #121212; }
+  }
+  @if ($color_type == 'midblackness') {
+    @if ($type == 'a') { @return #FFFFFF; }
+    @if ($type == 'b') { @return #FAFAFA; }
+    @if ($type == 'c') { @return #F2F2F2; }
+    @if ($type == 'd') { @return #CCCCCC; }
+    @if ($type == 'e') { @return lighten($black, 4.0%); }
+    @if ($type == 'f') { @return lighten($black, 4.0% * 2); }
+    @if ($type == 'g') { @return lighten($black, 4.0% * 3); }
+    @if ($type == 'h') { @return lighten($black, 4.0% * 4); }
   }
   @if ($color_type == 'default') {
     @if ($type == 'a') { @return #FFFFFF; }

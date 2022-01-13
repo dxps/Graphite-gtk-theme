@@ -51,10 +51,12 @@ OPTIONS:
 
   -s, --size VARIANT      Specify size variant [standard|compact] (Default: standard variants)
 
-  --tweaks                Specify versions for tweaks [nord|black|rimless] (nord can not mix use with black !)
+  --tweaks                Specify versions for tweaks [nord|black|rimless|normal] (only nord and black option can not mix use with!)
                           1. nord:     Nord color version
                           2. black:    Blackness color version
-                          3. rimless:  Remove the 2px outline about windows and menus
+                          3. midblack:    Mid-Blackness color version
+                          4. rimless:  Remove the 2px outline about windows and menus
+                          5. normal:   Normal sidebar style (Nautilus)
 
   -h, --help              Show help
 EOF
@@ -180,6 +182,13 @@ install() {
   mkdir -p                                                                                   "${THEME_DIR}-xhdpi/xfwm4"
   cp -r "${SRC_DIR}/assets/xfwm4/assets${ELSE_LIGHT:-}${ctype}-xhdpi/"*.png                  "${THEME_DIR}-xhdpi/xfwm4"
   cp -r "${SRC_DIR}/main/xfwm4/themerc${ELSE_LIGHT:-}"                                       "${THEME_DIR}-xhdpi/xfwm4/themerc"
+
+  mkdir -p                                                                                   "${THEME_DIR}/plank"
+  if [[ "$color" == '-light' ]]; then
+    cp -r "${SRC_DIR}/main/plank/theme-light/"*                                              "${THEME_DIR}/plank"
+  else
+    cp -r "${SRC_DIR}/main/plank/theme-dark/"*                                               "${THEME_DIR}/plank"
+  fi
 }
 
 themes=()
@@ -322,9 +331,19 @@ while [[ $# -gt 0 ]]; do
             echo -e "Install Blackness version! ..."
             shift
             ;;
+         midblack)
+            midblackness="true"
+            echo -e "Install MidBlackness version! ..."
+            shift
+            ;;
           rimless)
             rimless="true"
             echo -e "Install Rimless version! ..."
+            shift
+            ;;
+          normal)
+            normal="true"
+            echo -e "Install Normal sidebar version! ..."
             shift
             ;;
           -*)
@@ -401,8 +420,16 @@ blackness_color() {
   sed -i "/\$color_type:/s/default/blackness/" ${SRC_DIR}/sass/_tweaks-temp.scss
 }
 
+midblackness_color() {
+  sed -i "/\$color_type:/s/default/midblackness/" ${SRC_DIR}/sass/_tweaks-temp.scss
+}
+
 border_rimless() {
   sed -i "/\$rimless:/s/false/true/" ${SRC_DIR}/sass/_tweaks-temp.scss
+}
+
+normal_sidebar() {
+  sed -i "/\$sidebar:/s/styled/normal/" ${SRC_DIR}/sass/_tweaks-temp.scss
 }
 
 theme_color() {
@@ -438,7 +465,7 @@ theme_color() {
 }
 
 theme_tweaks() {
-  if [[ "$accent" == 'true' || "$compact" == 'true' || "$nord" == 'true'  || "$rimless" == 'true' || "$blackness" == 'true' ]]; then
+  if [[ "$accent" == 'true' || "$compact" == 'true' || "$nord" == 'true'  || "$rimless" == 'true' || "$blackness" == 'true' || "$midblackness" == 'true' || "$normal" = "true" ]]; then
     tweaks='true'
     install_package; tweaks_temp
   fi
@@ -458,9 +485,17 @@ theme_tweaks() {
   if [[ "$blackness" = "true" ]] ; then
     blackness_color
   fi
+  
+  if [[ "$midblackness" = "true" ]] ; then
+    midblackness_color
+  fi
 
   if [[ "$rimless" = "true" ]] ; then
     border_rimless
+  fi
+
+  if [[ "$normal" = "true" ]] ; then
+    normal_sidebar
   fi
 }
 
@@ -468,7 +503,7 @@ install_theme() {
   for theme in "${themes[@]}"; do
     for color in "${colors[@]}"; do
       for size in "${sizes[@]}"; do
-        install "${dest:-$DEST_DIR}" "${_name:-$THEME_NAME}" "$theme" "$color" "$size" "$ctype"
+        install "${dest:-$DEST_DIR}" "${name:-$THEME_NAME}" "$theme" "$color" "$size" "$ctype"
       done
     done
   done

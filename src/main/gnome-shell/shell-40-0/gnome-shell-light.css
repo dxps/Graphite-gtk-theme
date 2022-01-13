@@ -2432,18 +2432,18 @@ StEntry StLabel.hint-text, .popup-menu .search-entry StLabel.hint-text {
 }
 
 .popup-menu .popup-sub-menu {
-  background-color: #333333;
-  color: rgba(255, 255, 255, 0.7);
   border: none;
   box-shadow: none;
   margin: 0 6px;
   border-radius: 0 0 6px 6px;
+  background-color: #333333;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .popup-menu .popup-sub-menu .popup-menu-item {
-  color: rgba(255, 255, 255, 0.7);
   border-radius: 6px;
   margin: 0;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .popup-menu .popup-sub-menu .popup-menu-item.selected {
@@ -2692,7 +2692,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .app-folder-dialog .folder-name-container .folder-name-entry:insensitive, .search-entry:insensitive {
-  border: none;
+  background-color: rgba(255, 255, 255, 0.35);
+  color: rgba(0, 0, 0, 0.35);
+  border-color: transparent;
+}
+
+.app-folder-dialog .folder-name-container .folder-name-entry:insensitive StLabel.hint-text, .app-folder-dialog .folder-name-container .folder-name-entry:insensitive .search-entry-icon, .search-entry:insensitive StLabel.hint-text, .search-entry:insensitive .search-entry-icon {
   color: rgba(0, 0, 0, 0.26);
 }
 
@@ -2970,20 +2975,21 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-gradient-start: rgba(255, 255, 255, 0.05);
   background-gradient-end: transparent;
   background-gradient-direction: horizontal;
-  border-radius: 15px 0px 0px 15px;
+  border-radius: 18px 0px 0px 18px;
 }
 
 .page-navigation-hint.previous:ltr, .page-navigation-hint.next:rtl {
   background-gradient-start: transparent;
   background-gradient-end: rgba(255, 255, 255, 0.05);
   background-gradient-direction: horizontal;
-  border-radius: 0px 15px 15px 0px;
+  border-radius: 0px 18px 18px 0px;
 }
 
 .page-navigation-arrow {
-  margin: 6px;
+  margin: 0;
   width: 24px;
   height: 24px;
+  color: white;
 }
 
 #dash {
@@ -3114,8 +3120,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .workspace-thumbnail-indicator {
   border: 3px solid #333333;
-  border-radius: 3px;
-  padding: 0px;
+  border-radius: 6px;
+  padding: 0;
 }
 
 .bottom #dashtodockDashScrollview,
@@ -3204,7 +3210,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #dashtodockContainer .app-well-app-running-dot {
-  background-color: rgba(0, 0, 0, 0.26) !important;
+  background-color: rgba(0, 0, 0, 0.26);
 }
 
 #dashtodockContainer StWidget.focused .app-well-app-running-dot {
@@ -3212,7 +3218,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #dashtodockContainer:overview #dash .app-well-app-running-dot {
-  background-color: rgba(255, 255, 255, 0.3) !important;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 #dashtodockContainer:overview #dash StWidget.focused .app-well-app-running-dot {
@@ -3247,14 +3253,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #dashtodockContainer:overview #dash .show-apps:active .overview-icon, #dashtodockContainer:overview #dash .show-apps:checked .overview-icon, #dashtodockContainer:overview #dash .app-well-app:active .overview-icon, #dashtodockContainer:overview #dash .app-well-app:checked .overview-icon {
   background-color: rgba(255, 255, 255, 0.3);
-}
-
-#dashtodockContainer .app-well-app-running-dot {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-#dashtodockContainer StWidget.focused .app-well-app-running-dot {
-  background-color: #333333;
 }
 
 #dashtodockContainer.opaque #dash .dash-background {
