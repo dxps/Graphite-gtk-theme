@@ -2,7 +2,7 @@
 
 - Using font size 11 for compact as well (in `src/sass/gnome-shell/_variables.scss`).
 - Updated `%theme_dialogs`'s `box-shadow` (in `src/sass/gnome-shell/common/_dialogs.scss`).
-- Updated `shadow-z1` (in `src/sass/_variables.scss`).
+- Updated `shadow-z`s (in `src/sass/_variables.scss`).
 
 <br/>
 
