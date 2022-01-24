@@ -723,7 +723,7 @@ StWidget.focused .app-well-app-running-dot {
 .candidate-popup-content, .modal-dialog {
   background-color: #2C2C2C;
   border-radius: 10px;
-  box-shadow: 8px 8px 16px -13px rgba(0, 0, 0, 0.35);
+  box-shadow: 8px 8px 16px -13px rgba(0, 0, 0, 0.45);
   margin: 15px;
   border: none;
 }

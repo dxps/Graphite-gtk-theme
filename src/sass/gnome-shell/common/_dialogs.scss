@@ -3,7 +3,7 @@
 %theme_dialogs {
   background-color: $popover;
   border-radius: $modal_radius;
-  box-shadow: 8px 8px 16px -13px rgba(black, 0.35);
+  box-shadow: 8px 8px 16px -13px rgba(black, 0.45);
   margin: 15px;
 
   @if $rimless == 'false' {

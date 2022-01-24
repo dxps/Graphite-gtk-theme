@@ -92,8 +92,10 @@
     @if ($type == 'd') { @return #c4c9d4; }
     @if ($type == 'e') { @return #1c1f26; }
     @if ($type == 'f') { @return #1e222a; }
-    @if ($type == 'g') { @return #252a33; }
-    @if ($type == 'h') { @return #333a47; }
+    // [dxps] @if ($type == 'g') { @return #252a33; }
+    @if ($type == 'g') { @return #343B47; }
+    // [dxps] @if ($type == 'h') { @return #333a47; }
+    @if ($type == 'h') { @return #464F61; }
   }
   @if ($color_type == 'blackness') {
     @if ($type == 'a') { @return #FFFFFF; }

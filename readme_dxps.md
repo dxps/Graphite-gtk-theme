@@ -7,7 +7,7 @@
 
 - Updated `%theme_dialogs`'s `box-shadow` (in `src/sass/gnome-shell/common/_dialogs.scss`):
   ```scss
-  box-shadow: 8px 8px 16px -13px rgba(black, 0.35);
+  box-shadow: 8px 8px 16px -13px rgba(black, 0.45);
   ```
   
 - Updated `shadow-z`s (in `src/sass/_variables.scss`):
@@ -24,24 +24,24 @@
     0 2px 2px -9px rgba(black, 0.24),
     0 1px (5px * .6) 0 rgba(black, 0.12);
   $shadow-z3:
-    0 3px 2px -2px rgba(black, 0.2),
-    0 3px (4px * .6) 0 rgba(black, 0.14),
-    0 1px (8px * .6) 0 rgba(black, 0.12);
+    0 3px 2px -2px rgba(black, 0.3),
+    0 3px (4px * .6) 0 rgba(black, 0.24),
+    0 1px (8px * .6) 0 rgba(black, 0.22);
   $shadow-z4:
-    0 2px (4px * .6) -1px rgba(black, 0.2),
-    0 4px (5px * .6) 0 rgba(black, 0.14),
-    0 1px (10px * .6) 0 rgba(black, 0.12);
+    0 2px (4px * .6) -1px rgba(black, 0.3),
+    0 4px (5px * .6) 0 rgba(black, 0.24),
+    0 1px (10px * .6) 0 rgba(black, 0.22);
   $shadow-z12:
-    0 7px (8px * .6) -4px rgba(black, 0.2),
-    0 12px (17px * .6) 2px rgba(black, 0.14),
-    0 5px (22px * .6) 4px rgba(black, 0.12);
+    0 7px (8px * .6) -4px rgba(black, 0.3),
+    0 12px (17px * .6) 2px rgba(black, 0.24),
+    0 5px (22px * .6) 4px rgba(black, 0.22);
   $shadow-z16:
-    //  0 8px (10px * .6) -5px rgba(black, 0.2),
+    // 0 8px (10px * .6) -5px rgba(black, 0.2),
     // 0 16px (24px * .6) 2px rgba(black, 0.14),
     // 0 6px (30px * .6) 5px rgba(black, 0.12);
-    0 8px (10px * .6) -8px rgba(black, 0.4),
-    0 16px (24px * .6) 4px rgba(black, 0.34),
-    0 6px (30px * .6) 8px rgba(black, 0.32);
+    0 8px (10px * .6) -8px rgba(black, 0.5),
+    0 16px (24px * .6) 4px rgba(black, 0.44),
+    0 6px (30px * .6) 8px rgba(black, 0.42);
   ```
 
 <br/>
