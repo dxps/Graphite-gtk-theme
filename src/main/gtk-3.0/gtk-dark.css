@@ -2356,12 +2356,12 @@ frame.documents-dropdown, .app-notification, toolbar.osd {
   transition: box-shadow 75ms cubic-bezier(0, 0, 0.2, 1);
   padding: 4px;
   border-radius: 6px;
-  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.24), 0 1px 6px 0 rgba(0, 0, 0, 0.22), inset 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.4), 0 4px 3px 0 rgba(0, 0, 0, 0.34), 0 1px 6px 0 rgba(0, 0, 0, 0.32), inset 0 1px rgba(255, 255, 255, 0.1);
   background-color: #3C3C3C;
 }
 
 frame.documents-dropdown:backdrop, .app-notification:backdrop, toolbar.osd:backdrop {
-  box-shadow: 0 3px 2px -10px rgba(0, 0, 0, 0.3), 0 2px 2px -9px rgba(0, 0, 0, 0.24), 0 1px 3px 0 rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 3px 2px -10px rgba(0, 0, 0, 0.4), 0 2px 2px -9px rgba(0, 0, 0, 0.34), 0 1px 3px 0 rgba(0, 0, 0, 0.22), inset 0 1px rgba(255, 255, 255, 0.1);
 }
 
 frame.left.documents-dropdown, .left.app-notification, frame.right.documents-dropdown, .right.app-notification, frame.top.documents-dropdown, .top.app-notification, frame.bottom.documents-dropdown, .bottom.app-notification, toolbar.osd.left, toolbar.osd.right, toolbar.osd.top, toolbar.osd.bottom {
@@ -3177,11 +3177,11 @@ popover.background {
 
 popover.background, .csd popover.background {
   border: none;
-  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.24), 0 1px 6px 0 rgba(0, 0, 0, 0.22);
+  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.4), 0 4px 3px 0 rgba(0, 0, 0, 0.34), 0 1px 6px 0 rgba(0, 0, 0, 0.32);
 }
 
 popover.background:backdrop, .csd popover.background:backdrop {
-  box-shadow: 0 3px 2px -10px rgba(0, 0, 0, 0.3), 0 2px 2px -9px rgba(0, 0, 0, 0.24), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 2px -10px rgba(0, 0, 0, 0.4), 0 2px 2px -9px rgba(0, 0, 0, 0.34), 0 1px 3px 0 rgba(0, 0, 0, 0.22);
 }
 
 popover.background > stack {
@@ -5121,12 +5121,12 @@ colorswatch#editor-color-sample overlay {
 colorchooser .popover.osd {
   transition: box-shadow 75ms cubic-bezier(0, 0, 0.2, 1);
   border-radius: 6px;
-  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.24), 0 1px 6px 0 rgba(0, 0, 0, 0.22), inset 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.4), 0 4px 3px 0 rgba(0, 0, 0, 0.34), 0 1px 6px 0 rgba(0, 0, 0, 0.32), inset 0 1px rgba(255, 255, 255, 0.1);
   background-color: #3C3C3C;
 }
 
 colorchooser .popover.osd:backdrop {
-  box-shadow: 0 3px 2px -10px rgba(0, 0, 0, 0.3), 0 2px 2px -9px rgba(0, 0, 0, 0.24), 0 1px 3px 0 rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 3px 2px -10px rgba(0, 0, 0, 0.4), 0 2px 2px -9px rgba(0, 0, 0, 0.34), 0 1px 3px 0 rgba(0, 0, 0, 0.22), inset 0 1px rgba(255, 255, 255, 0.1);
 }
 
 /********
@@ -5147,7 +5147,7 @@ decoration {
 }
 
 decoration:backdrop {
-  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.24), 0 1px 6px 0 rgba(0, 0, 0, 0.22), 0 0 36px transparent;
+  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.4), 0 4px 3px 0 rgba(0, 0, 0, 0.34), 0 1px 6px 0 rgba(0, 0, 0, 0.32), 0 0 36px transparent;
 }
 
 .maximized decoration, .fullscreen decoration, .tiled decoration, .tiled-top decoration, .tiled-right decoration, .tiled-bottom decoration, .tiled-left decoration {
@@ -5164,7 +5164,7 @@ decoration:backdrop {
 
 .csd.popup decoration {
   border-radius: 10px;
-  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.24), 0 1px 6px 0 rgba(0, 0, 0, 0.22);
+  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.4), 0 4px 3px 0 rgba(0, 0, 0, 0.34), 0 1px 6px 0 rgba(0, 0, 0, 0.32);
 }
 
 tooltip.csd decoration {
@@ -6512,7 +6512,7 @@ GdMainIconView.content-view {
 .documents-counter {
   margin: 8px;
   border-radius: 9999px;
-  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.24), 0 1px 6px 0 rgba(0, 0, 0, 0.22);
+  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.4), 0 4px 3px 0 rgba(0, 0, 0, 0.34), 0 1px 6px 0 rgba(0, 0, 0, 0.32);
   background-color: #E0E0E0;
   color: rgba(0, 0, 0, 0.87);
   font-weight: bold;
@@ -7929,7 +7929,7 @@ window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical
 .lock-dialog {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 7px;
-  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.24), 0 1px 6px 0 rgba(0, 0, 0, 0.22), inset 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.4), 0 4px 3px 0 rgba(0, 0, 0, 0.34), 0 1px 6px 0 rgba(0, 0, 0, 0.32), inset 0 1px rgba(255, 255, 255, 0.1);
   background-color: #3C3C3C;
 }
 
@@ -7982,7 +7982,7 @@ MsdOsdWindow.background.osd .progressbar {
   border-width: 1px;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.3);
   border-radius: 6px;
-  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.24), 0 1px 6px 0 rgba(0, 0, 0, 0.22);
+  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.4), 0 4px 3px 0 rgba(0, 0, 0, 0.34), 0 1px 6px 0 rgba(0, 0, 0, 0.32);
   background-color: #3C3C3C;
 }
 
@@ -8567,7 +8567,7 @@ calendar.raven-calendar:selected {
   margin: 5px 9px;
   padding: 3px;
   border-radius: 12px;
-  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.24), 0 1px 6px 0 rgba(0, 0, 0, 0.22), inset 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.4), 0 4px 3px 0 rgba(0, 0, 0, 0.34), 0 1px 6px 0 rgba(0, 0, 0, 0.32), inset 0 1px rgba(255, 255, 255, 0.1);
   background-color: #3C3C3C;
 }
 
@@ -8791,7 +8791,7 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
 #restart_dialog {
   margin: 8px;
   border-radius: 6px;
-  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.24), 0 1px 6px 0 rgba(0, 0, 0, 0.22), inset 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.4), 0 4px 3px 0 rgba(0, 0, 0, 0.34), 0 1px 6px 0 rgba(0, 0, 0, 0.32), inset 0 1px rgba(255, 255, 255, 0.1);
   background-color: #3C3C3C;
 }
 
