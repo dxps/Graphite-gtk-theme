@@ -7,7 +7,9 @@
 
 - Updated `%theme_dialogs`'s `box-shadow` (in `src/sass/gnome-shell/common/_dialogs.scss`):
   ```scss
-  box-shadow: 8px 8px 16px -13px rgba(black, 0.55);
+  %theme_dialogs {
+    ...
+    box-shadow: 8px 8px 16px -13px rgba(black, 0.55);
   ```
   
 - Updated `shadow-z`s (in `src/sass/_variables.scss`):
@@ -36,6 +38,17 @@
     0 8px (10px * .6) -8px rgba(black, 0.5),
     0 16px (24px * .6) 4px rgba(black, 0.44),
     0 6px (30px * .6) 8px rgba(black, 0.42);
+  ```
+- Updated Nord's dark bg colors (in `src/sass/_colors.scss`) to look awesome in both day (light) and night (dark) times:
+  ```
+  @function background($type) {
+    @if ($color_type == 'nord') {
+      ...
+      // [dxps] @if ($type == 'g') { @return #252a33; }
+      @if ($type == 'g') { @return #313742; }
+      // [dxps] @if ($type == 'h') { @return #333a47; }
+      @if ($type == 'h') { @return #404959; }
+    }
   ```
 
 <br/>
