@@ -4098,10 +4098,8 @@ shortcut > .keycap {
 stackswitcher {
   min-height: 0;
   border-radius: 9999px;
-  padding: 2px;
-  margin: 6px 0;
-  background-color: transparent;
-  border: 2px solid #333333;
+  padding: 0;
+  background-color: alpha(currentColor, 0.05);
 }
 
 stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action) {

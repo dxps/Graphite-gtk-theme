@@ -2560,10 +2560,6 @@ searchbar > revealer > box {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.titlebar stackswitcher {
-  border: 2px solid #e0e0e0;
-}
-
 .titlebar stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action).text-button:active {
   box-shadow: inset 0 0 0 9999px rgba(255, 255, 255, 0.08);
   background-image: radial-gradient(circle, rgba(255, 255, 255, 0.08) 10%, transparent 0%);
@@ -5255,10 +5251,8 @@ cursor-handle.insertion-cursor:dir(ltr), cursor-handle.insertion-cursor:dir(rtl)
 stackswitcher {
   min-height: 0;
   border-radius: 9999px;
-  padding: 2px;
-  margin: 6px 0;
-  background-color: transparent;
-  border: 2px solid #333333;
+  padding: 0;
+  background-color: alpha(currentColor, 0.05);
 }
 
 stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action) {
