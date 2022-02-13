@@ -51,10 +51,11 @@ OPTIONS:
 
   -s, --size VARIANT      Specify size variant [standard|compact] (Default: standard variants)
 
-  --tweaks                Specify versions for tweaks [nord|black|rimless|normal] (only nord and black option can not mix use with!)
-                          1. nord:     Nord color version
-                          2. black:    Blackness color version
-                          3. midblack:    Mid-Blackness color version
+  --tweaks                Specify versions for tweaks [nord|black|darker|rimless|normal]
+                          (WORRING: 'nord' and 'darker' can not mix use with 'black'!)
+                          1. nord:     Nord colorscheme version
+                          2. black:    Blackness colorscheme version
+                          3. darker:   Darker (default|nord) color version (black option can not be darker)
                           4. rimless:  Remove the 2px outline about windows and menus
                           5. normal:   Normal sidebar style (Nautilus)
 
@@ -123,9 +124,10 @@ install() {
   ln -s assets/no-notifications.svg no-notifications.svg
 
   mkdir -p                                                                                   "${THEME_DIR}/gtk-2.0"
-  cp -r "${SRC_DIR}/main/gtk-2.0/gtkrc${theme}${ELSE_DARK:-}"                                "${THEME_DIR}/gtk-2.0/gtkrc"
+  cp -r "${SRC_DIR}/main/gtk-2.0/gtkrc${theme}${ELSE_DARK:-}${ctype}"                        "${THEME_DIR}/gtk-2.0/gtkrc"
   cp -r "${SRC_DIR}/main/gtk-2.0/common/"*'.rc'                                              "${THEME_DIR}/gtk-2.0"
-  cp -r "${SRC_DIR}/assets/gtk-2.0/assets${theme}${ELSE_DARK:-}"                             "${THEME_DIR}/gtk-2.0/assets"
+  cp -r "${SRC_DIR}/assets/gtk-2.0/assets-common${ELSE_DARK:-}${ctype}"                      "${THEME_DIR}/gtk-2.0/assets"
+  cp -r "${SRC_DIR}/assets/gtk-2.0/assets${theme}${ELSE_DARK:-}${ctype}/"*.png               "${THEME_DIR}/gtk-2.0/assets"
 
   mkdir -p                                                                                   "${THEME_DIR}/gtk-3.0"
   cp -r "${SRC_DIR}/assets/gtk/assets${theme}"                                               "${THEME_DIR}/gtk-3.0/assets"
@@ -331,9 +333,9 @@ while [[ $# -gt 0 ]]; do
             echo -e "Install Blackness version! ..."
             shift
             ;;
-         midblack)
-            midblackness="true"
-            echo -e "Install MidBlackness version! ..."
+         darker)
+            darker="true"
+            echo -e "Install darker version! ..."
             shift
             ;;
           rimless)
@@ -420,8 +422,8 @@ blackness_color() {
   sed -i "/\$color_type:/s/default/blackness/" ${SRC_DIR}/sass/_tweaks-temp.scss
 }
 
-midblackness_color() {
-  sed -i "/\$color_type:/s/default/midblackness/" ${SRC_DIR}/sass/_tweaks-temp.scss
+darker_color() {
+  sed -i "/\$darker:/s/false/true/" ${SRC_DIR}/sass/_tweaks-temp.scss
 }
 
 border_rimless() {
@@ -465,7 +467,7 @@ theme_color() {
 }
 
 theme_tweaks() {
-  if [[ "$accent" == 'true' || "$compact" == 'true' || "$nord" == 'true'  || "$rimless" == 'true' || "$blackness" == 'true' || "$midblackness" == 'true' || "$normal" = "true" ]]; then
+  if [[ "$accent" == 'true' || "$compact" == 'true' || "$nord" == 'true'  || "$rimless" == 'true' || "$blackness" == 'true' || "$darker" == 'true' || "$normal" = "true" ]]; then
     tweaks='true'
     install_package; tweaks_temp
   fi
@@ -485,9 +487,9 @@ theme_tweaks() {
   if [[ "$blackness" = "true" ]] ; then
     blackness_color
   fi
-  
-  if [[ "$midblackness" = "true" ]] ; then
-    midblackness_color
+
+  if [[ "$darker" = "true" ]] ; then
+    darker_color
   fi
 
   if [[ "$rimless" = "true" ]] ; then
