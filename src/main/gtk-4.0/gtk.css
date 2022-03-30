@@ -979,15 +979,15 @@ spinbutton.vertical > button.down {
 }
 
 list > row spinbutton:not(.vertical) > button {
-  margin: 6px;
+  margin: 4px;
 }
 
 list > row spinbutton:not(.vertical) > button.up:dir(ltr), list > row spinbutton:not(.vertical) > button.down:dir(rtl) {
-  margin-left: 3px;
+  margin-left: 2px;
 }
 
 list > row spinbutton:not(.vertical) > button.up:dir(rtl), list > row spinbutton:not(.vertical) > button.down:dir(ltr) {
-  margin-right: 3px;
+  margin-right: 2px;
 }
 
 /**************
