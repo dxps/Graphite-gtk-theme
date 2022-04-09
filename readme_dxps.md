@@ -44,10 +44,13 @@
   @function background($type) {
     @if ($color_type == 'nord') {
       ...
+      // FYI: Using (just a little lighter) bg colors, according to https://www.nordtheme.com
       // [dxps] @if ($type == 'g') { @return #252a33; }
-      @if ($type == 'g') { @return #313742; }
+      // [dxps] @if ($type == 'g') { @return #313742; }
+      @if ($type == 'g') { @return #3B4252; }
       // [dxps] @if ($type == 'h') { @return #333a47; }
-      @if ($type == 'h') { @return #404959; }
+      // [dxps] @if ($type == 'h') { @return #404959; }
+      @if ($type == 'h') { @return #4C566A; }
     }
   ```
 
@@ -57,7 +60,12 @@
 
 - After doing changes, make sure you run `./parse-sass.sh` before installing it.<br/>
 
-- I started using the borderless flavor, installed using:<br/>
-  `./install.sh -c dark -s compact --tweaks rimless`.
+- Install the borderless flavor using:<br/>
+  `./install.sh -s compact --tweaks rimless`.
+
+- Before applying it, use ALT + F2 to restart the X server.
+
+Note: At least one time, when GNOME didn't detect the changes, installed it with a different name using:
+`./install.sh -n GraphiteDXPS -s compact --tweaks rimless`
 
 <br/>
