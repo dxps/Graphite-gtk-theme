@@ -105,7 +105,7 @@ headerbar label:disabled, tab label:disabled, button label:disabled {
 
 label.osd {
   border-radius: 6px;
-  background-color: rgba(58, 65, 80, 0.9);
+  background-color: rgba(61, 69, 85, 0.9);
   color: white;
 }
 
@@ -3859,7 +3859,7 @@ tooltip {
 }
 
 tooltip.background {
-  background-color: rgba(58, 65, 80, 0.9);
+  background-color: rgba(61, 69, 85, 0.9);
   color: white;
   box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.4), 0 4px 3px 0 rgba(0, 0, 0, 0.34), 0 1px 6px 0 rgba(0, 0, 0, 0.32);
   border-radius: 3px;

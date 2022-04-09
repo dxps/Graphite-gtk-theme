@@ -100,7 +100,7 @@ stage {
 .app-folder-dialog {
   border-radius: 30px;
   padding: 8px;
-  background-color: #292e38;
+  background-color: #2e3440;
   border: none;
 }
 
@@ -195,7 +195,7 @@ StWidget.focused .app-well-app-running-dot {
 
 .system-action-icon {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-  background-color: #292e38;
+  background-color: #2e3440;
   color: white;
   border-radius: 9999px;
   icon-size: 48px;
@@ -1121,7 +1121,7 @@ StEntry StLabel.hint-text, .popup-menu .search-entry StLabel.hint-text {
 
 /* On-screen Keyboard */
 #keyboard {
-  background-color: #2b303b;
+  background-color: #333A47;
   box-shadow: none;
 }
 
@@ -1209,7 +1209,7 @@ StEntry StLabel.hint-text, .popup-menu .search-entry StLabel.hint-text {
 .keyboard-subkeys {
   color: inherit;
   -arrow-border-radius: 10px;
-  -arrow-background-color: #2b303b;
+  -arrow-background-color: #333A47;
   -arrow-border-width: 0;
   -arrow-border-color: transparent;
   -arrow-base: 20px;
@@ -1237,7 +1237,7 @@ StEntry StLabel.hint-text, .popup-menu .search-entry StLabel.hint-text {
 
 /* Login Dialog */
 #lockDialogGroup {
-  background-color: #292e38;
+  background-color: #2e3440;
 }
 
 .login-dialog-banner-view {
@@ -2106,7 +2106,7 @@ StEntry StLabel.hint-text, .popup-menu .search-entry StLabel.hint-text {
 /* OSD */
 .workspace-switcher-container, .switcher-list, .resize-popup, .osd-window {
   color: rgba(255, 255, 255, 0.7);
-  background-color: #292e38;
+  background-color: #2e3440;
   border: none;
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.25);
   margin: 5px 8px 11px;
@@ -2151,7 +2151,7 @@ StEntry StLabel.hint-text, .popup-menu .search-entry StLabel.hint-text {
 
 .pad-osd-window {
   padding: 32px;
-  background-color: #292e38;
+  background-color: #2e3440;
 }
 
 .pad-osd-window .pad-osd-title-box {
@@ -2172,7 +2172,7 @@ StEntry StLabel.hint-text, .popup-menu .search-entry StLabel.hint-text {
 
 /* Top Bar */
 #panel {
-  background-color: #292e38;
+  background-color: #2e3440;
   font-weight: bold;
   height: 28px;
   color: rgba(255, 255, 255, 0.7);
@@ -2183,7 +2183,7 @@ StEntry StLabel.hint-text, .popup-menu .search-entry StLabel.hint-text {
 
 #panel .panel-corner {
   -panel-corner-radius: 0;
-  -panel-corner-background-color: #292e38;
+  -panel-corner-background-color: #2e3440;
   -panel-corner-border-width: 2px;
   -panel-corner-border-color: transparent;
   -panel-corner-opacity: 1;
@@ -2576,14 +2576,14 @@ StEntry StLabel.hint-text, .popup-menu .search-entry StLabel.hint-text {
 .unlock-dialog-notifications-container .unlock-dialog-notification-source {
   padding: 12px 6px;
   border: none;
-  background-color: #292e38;
+  background-color: #2e3440;
   color: white;
   border-radius: 10px;
 }
 
 .unlock-dialog-notifications-container .notification.critical,
 .unlock-dialog-notifications-container .unlock-dialog-notification-source.critical {
-  background-color: #3a4150;
+  background-color: #3f4758;
 }
 
 .unlock-dialog-notification-label {
@@ -3377,7 +3377,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .screen-shield-notifications-container .screen-shield-notification-source {
   padding: 8px;
   border: none;
-  background-color: #292e38;
+  background-color: #2e3440;
   color: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
 }
@@ -3399,7 +3399,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel.lock-screen {
-  background-color: #292e38;
+  background-color: #2e3440;
 }
 
 #overview StScrollBar StBin#trough, #screenShieldNotifications StScrollBar StBin#trough {
@@ -3471,7 +3471,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .window-caption {
   spacing: 25px;
   color: rgba(255, 255, 255, 0.7);
-  background-color: #2b303b;
+  background-color: #333A47;
   border-radius: 6px;
   padding: 2px 8px;
   border: none;
@@ -3486,7 +3486,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .window-close {
-  background-color: #2b303b;
+  background-color: #333A47;
   color: white;
   border-radius: 21px;
   padding: 3px;
@@ -3498,12 +3498,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .window-close:hover {
   color: white;
-  background-color: #383e4d;
+  background-color: #404959;
 }
 
 .window-close:active {
   color: white;
-  background-color: #1e2229;
+  background-color: #262b35;
 }
 
 .workspace-thumbnails {
@@ -3590,11 +3590,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #dashtodockContainer.dashtodock #dash {
-  background-color: #292e38;
+  background-color: #2e3440;
 }
 
 #dashtodockContainer #dash {
-  background-color: #292e38;
+  background-color: #2e3440;
 }
 
 #dashtodockContainer .app-well-app-running-dot {
@@ -3644,11 +3644,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #dashtodockContainer.opaque #dash {
-  background-color: #292e38;
+  background-color: #2e3440;
 }
 
 #dashtodockContainer.transparent #dash {
-  background-color: rgba(41, 46, 56, 0.35);
+  background-color: rgba(46, 52, 64, 0.35);
 }
 
 #dashtodockContainer:overview #dash {
@@ -3661,7 +3661,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #dashtodockContainer.extended:overview #dash, #dashtodockContainer.opaque.extended:overview #dash, #dashtodockContainer.transparent.extended:overview #dash {
-  background-color: #292e38;
+  background-color: #2e3440;
 }
 
 #dashtodockContainer.running-dots .dash-item-container > StButton, #dashtodockContainer.dashtodock .dash-item-container > StButton {
@@ -3701,7 +3701,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #dash:desktop {
-  background-color: #292e38;
+  background-color: #2e3440;
 }
 
 .openweather-button, .openweather-button-action, .openweather-menu-button-container, .openweather-button-box {

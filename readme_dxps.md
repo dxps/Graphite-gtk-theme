@@ -44,13 +44,26 @@
   @function background($type) {
     @if ($color_type == 'nord') {
       ...
-      // FYI: Using (just a little lighter) bg colors, according to https://www.nordtheme.com
+    @if ($darker == 'true') {
+      @if ($type == 'e') { @return #1c1f26; }
+      @if ($type == 'f') { @return #1e222a; }
       // [dxps] @if ($type == 'g') { @return #252a33; }
       // [dxps] @if ($type == 'g') { @return #313742; }
       @if ($type == 'g') { @return #3B4252; }
       // [dxps] @if ($type == 'h') { @return #333a47; }
       // [dxps] @if ($type == 'h') { @return #404959; }
       @if ($type == 'h') { @return #4C566A; }
+    } @else {
+      // @if ($type == 'e') { @return #292e38; }
+      // @if ($type == 'f') { @return #2b303b; }
+      // @if ($type == 'g') { @return #313744; }
+      // @if ($type == 'h') { @return #404859; }
+      // [dxps] Using Polar Night colors (see www.nordtheme).
+      //        with 'f' as a version between e and g values.
+      @if ($type == 'e') { @return #2e3440; }
+      @if ($type == 'f') { @return #333A47; }
+      @if ($type == 'g') { @return #3b4252; }
+      @if ($type == 'h') { @return #434c5e; }
     }
   ```
 

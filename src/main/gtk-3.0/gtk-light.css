@@ -1372,7 +1372,7 @@ headerbar label:disabled, tab label:disabled, button label:disabled {
 
 label.osd {
   border-radius: 6px;
-  background-color: rgba(58, 65, 80, 0.9);
+  background-color: rgba(61, 69, 85, 0.9);
   color: white;
 }
 
@@ -4996,7 +4996,7 @@ tooltip {
 }
 
 tooltip.background {
-  background-color: rgba(58, 65, 80, 0.9);
+  background-color: rgba(61, 69, 85, 0.9);
   color: white;
 }
 
@@ -6846,7 +6846,7 @@ list.categories {
   min-height: 24px;
   padding: 0 4px;
   border-radius: 6px;
-  background-color: #2b303b;
+  background-color: #333A47;
   color: white;
 }
 
@@ -7233,7 +7233,7 @@ window.background.chromium menu menuitem {
 }
 
 tooltip.background.chromium {
-  background-color: #3a4150;
+  background-color: #3d4555;
 }
 
 /***********
@@ -7883,7 +7883,7 @@ window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical
 }
 
 .caja-desktop.view .entry, filechooser stack.view scrolledwindow treeview.caja-desktop.view .entry, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.caja-desktop.view:not(.progressbar):not(.trough) .entry {
-  background-color: #313744;
+  background-color: #3b4252;
   color: white;
   caret-color: currentColor;
 }
@@ -7985,7 +7985,7 @@ window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical
 /* multimedia OSD */
 MsdOsdWindow.background.osd {
   border-radius: 6px;
-  background-color: rgba(58, 65, 80, 0.9);
+  background-color: rgba(61, 69, 85, 0.9);
   color: white;
 }
 
@@ -8290,7 +8290,7 @@ MsdOsdWindow.background.osd .progressbar {
 }
 
 .budgie-panel.transparent {
-  background-color: #2b303b;
+  background-color: #333A47;
 }
 
 .budgie-panel button {
@@ -8572,7 +8572,7 @@ calendar.raven-calendar:selected {
 }
 
 .raven-mpris {
-  background-color: #2b303b;
+  background-color: #333A47;
   color: white;
 }
 
@@ -8798,7 +8798,7 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
  * LightDM GTK+ Greeter *
  ************************/
 #panel_window {
-  background-color: #313744;
+  background-color: #3b4252;
   color: white;
 }
 

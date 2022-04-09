@@ -101,10 +101,16 @@
       // [dxps] @if ($type == 'h') { @return #404959; }
       @if ($type == 'h') { @return #4C566A; }
     } @else {
-      @if ($type == 'e') { @return #292e38; }
-      @if ($type == 'f') { @return #2b303b; }
-      @if ($type == 'g') { @return #313744; }
-      @if ($type == 'h') { @return #404859; }
+      // @if ($type == 'e') { @return #292e38; }
+      // @if ($type == 'f') { @return #2b303b; }
+      // @if ($type == 'g') { @return #313744; }
+      // @if ($type == 'h') { @return #404859; }
+      // [dxps] Using Polar Night colors (see www.nordtheme).
+      //        with 'f' as a version between e and g values.
+      @if ($type == 'e') { @return #2e3440; }
+      @if ($type == 'f') { @return #333A47; }
+      @if ($type == 'g') { @return #3b4252; }
+      @if ($type == 'h') { @return #434c5e; }
     }
   } @else {
     @if ($type == 'a') { @return #FFFFFF; }
