@@ -25,15 +25,18 @@ COLOR_VARIANTS=('' '-light' '-dark')
 SIZE_VARIANTS=('' '-compact')
 
 if [[ "$(command -v gnome-shell)" ]]; then
+  gnome-shell --version
   SHELL_VERSION="$(gnome-shell --version | cut -d ' ' -f 3 | cut -d . -f -1)"
-  if [[ "${SHELL_VERSION:-}" -ge "40" ]]; then
-    GS_VERSION="new"
+  if [[ "${SHELL_VERSION:-}" -ge "42" ]]; then
+    GS_VERSION="42-0"
+  elif [[ "${SHELL_VERSION:-}" -ge "40" ]]; then
+    GS_VERSION="40-0"
   else
-    GS_VERSION="old"
+    GS_VERSION="3-28"
   fi
   else
     echo "'gnome-shell' not found, using styles for last gnome-shell version available."
-    GS_VERSION="new"
+    GS_VERSION="42-0"
 fi
 
 usage() {
@@ -99,20 +102,7 @@ install() {
 
   mkdir -p                                                                                   "${THEME_DIR}/gnome-shell"
   cp -r "${SRC_DIR}/main/gnome-shell/pad-osd.css"                                            "${THEME_DIR}/gnome-shell"
-
-  if [[ "$tweaks" == 'true' ]]; then
-    if [[ "${GS_VERSION:-}" == 'new' ]]; then
-      sassc $SASSC_OPT "${SRC_DIR}/main/gnome-shell/shell-40-0/gnome-shell${color}.scss"     "${THEME_DIR}/gnome-shell/gnome-shell.css"
-    else
-      sassc $SASSC_OPT "${SRC_DIR}/main/gnome-shell/shell-3-28/gnome-shell${color}.scss"     "${THEME_DIR}/gnome-shell/gnome-shell.css"
-    fi
-  else
-    if [[ "${GS_VERSION:-}" == 'new' ]]; then
-      cp -r "${SRC_DIR}/main/gnome-shell/shell-40-0/gnome-shell${color}.css"                 "${THEME_DIR}/gnome-shell/gnome-shell.css"
-    else
-      cp -r "${SRC_DIR}/main/gnome-shell/shell-3-28/gnome-shell${color}.css"                 "${THEME_DIR}/gnome-shell/gnome-shell.css"
-    fi
-  fi
+  sassc $SASSC_OPT "${SRC_DIR}/main/gnome-shell/gnome-shell${color}.scss"                    "${THEME_DIR}/gnome-shell/gnome-shell.css"
 
   cp -r "${SRC_DIR}/assets/gnome-shell/common-assets"                                        "${THEME_DIR}/gnome-shell/assets"
   cp -r "${SRC_DIR}/assets/gnome-shell/assets${ELSE_DARK:-}/"*.svg                           "${THEME_DIR}/gnome-shell/assets"
@@ -133,39 +123,21 @@ install() {
   cp -r "${SRC_DIR}/assets/gtk/assets${theme}"                                               "${THEME_DIR}/gtk-3.0/assets"
   cp -r "${SRC_DIR}/assets/gtk/scalable"                                                     "${THEME_DIR}/gtk-3.0/assets"
   cp -r "${SRC_DIR}/assets/gtk/thumbnail${ELSE_DARK:-}.png"                                  "${THEME_DIR}/gtk-3.0/thumbnail.png"
-
-  if [[ "$tweaks" == 'true' ]]; then
-    sassc $SASSC_OPT "${SRC_DIR}/main/gtk-3.0/gtk${color}.scss"                              "${THEME_DIR}/gtk-3.0/gtk.css"
-    sassc $SASSC_OPT "${SRC_DIR}/main/gtk-3.0/gtk-dark.scss"                                 "${THEME_DIR}/gtk-3.0/gtk-dark.css"
-  else
-    cp -r "${SRC_DIR}/main/gtk-3.0/gtk${color}.css"                                          "${THEME_DIR}/gtk-3.0/gtk.css"
-    cp -r "${SRC_DIR}/main/gtk-3.0/gtk-dark.css"                                             "${THEME_DIR}/gtk-3.0"
-  fi
+  sassc $SASSC_OPT "${SRC_DIR}/main/gtk-3.0/gtk${color}.scss"                                "${THEME_DIR}/gtk-3.0/gtk.css"
+  sassc $SASSC_OPT "${SRC_DIR}/main/gtk-3.0/gtk-dark.scss"                                   "${THEME_DIR}/gtk-3.0/gtk-dark.css"
 
   mkdir -p                                                                                   "${THEME_DIR}/gtk-4.0"
   cp -r "${SRC_DIR}/assets/gtk/assets${theme}"                                               "${THEME_DIR}/gtk-4.0/assets"
   cp -r "${SRC_DIR}/assets/gtk/scalable"                                                     "${THEME_DIR}/gtk-4.0/assets"
   cp -r "${SRC_DIR}/assets/gtk/thumbnail${ELSE_DARK:-}.png"                                  "${THEME_DIR}/gtk-4.0/thumbnail.png"
-
-  if [[ "$tweaks" == 'true' ]]; then
-    sassc $SASSC_OPT "${SRC_DIR}/main/gtk-4.0/gtk${color}.scss"                              "${THEME_DIR}/gtk-4.0/gtk.css"
-    sassc $SASSC_OPT "${SRC_DIR}/main/gtk-4.0/gtk-dark.scss"                                 "${THEME_DIR}/gtk-4.0/gtk-dark.css"
-  else
-    cp -r "${SRC_DIR}/main/gtk-4.0/gtk${color}.css"                                          "${THEME_DIR}/gtk-4.0/gtk.css"
-    cp -r "${SRC_DIR}/main/gtk-4.0/gtk-dark.css"                                             "${THEME_DIR}/gtk-4.0"
-  fi
+  sassc $SASSC_OPT "${SRC_DIR}/main/gtk-4.0/gtk${color}.scss"                                "${THEME_DIR}/gtk-4.0/gtk.css"
+  sassc $SASSC_OPT "${SRC_DIR}/main/gtk-4.0/gtk-dark.scss"                                   "${THEME_DIR}/gtk-4.0/gtk-dark.css"
 
   mkdir -p                                                                                   "${THEME_DIR}/cinnamon"
   cp -r "${SRC_DIR}/assets/cinnamon/common-assets"                                           "${THEME_DIR}/cinnamon/assets"
   cp -r "${SRC_DIR}/assets/cinnamon/assets${ELSE_DARK:-}/"*'.svg'                            "${THEME_DIR}/cinnamon/assets"
   cp -r "${SRC_DIR}/assets/cinnamon/theme${theme}/"*'.svg'                                   "${THEME_DIR}/cinnamon/assets"
-
-  if [[ "$tweaks" == 'true' ]]; then
-    sassc $SASSC_OPT "${SRC_DIR}/main/cinnamon/cinnamon${color}.scss"                        "${THEME_DIR}/cinnamon/cinnamon.css"
-  else
-    cp -r "${SRC_DIR}/main/cinnamon/cinnamon${color}.css"                                    "${THEME_DIR}/cinnamon/cinnamon.css"
-  fi
-
+  sassc $SASSC_OPT "${SRC_DIR}/main/cinnamon/cinnamon${color}.scss"                          "${THEME_DIR}/cinnamon/cinnamon.css"
   cp -r "${SRC_DIR}/assets/cinnamon/thumbnail${color}.png"                                   "${THEME_DIR}/cinnamon/thumbnail.png"
 
   mkdir -p                                                                                   "${THEME_DIR}/metacity-1"
@@ -394,19 +366,22 @@ install_package() {
     echo sassc needs to be installed to generate the css.
     if has_command zypper; then
       sudo zypper in sassc
+    elif has_command apt; then
+      sudo apt install sassc
     elif has_command apt-get; then
       sudo apt-get install sassc
     elif has_command dnf; then
       sudo dnf install sassc
-    elif has_command dnf; then
-      sudo dnf install sassc
+    elif has_command yum; then
+      sudo yum install sassc
     elif has_command pacman; then
       sudo pacman -S --noconfirm sassc
     fi
   fi
 }
 
-tweaks_temp() {
+sass_temp() {
+  cp -rf ${SRC_DIR}/sass/gnome-shell/_common.scss ${SRC_DIR}/sass/gnome-shell/_common-temp.scss
   cp -rf ${SRC_DIR}/sass/_tweaks.scss ${SRC_DIR}/sass/_tweaks-temp.scss
 }
 
@@ -432,6 +407,14 @@ border_rimless() {
 
 normal_sidebar() {
   sed -i "/\$sidebar:/s/styled/normal/" ${SRC_DIR}/sass/_tweaks-temp.scss
+}
+
+gnome_shell_version() {
+  sed -i "/\widgets/s/40-0/${GS_VERSION}/" ${SRC_DIR}/sass/gnome-shell/_common-temp.scss
+
+  if [[ "${GS_VERSION}" == '3-28' ]]; then
+    sed -i "/\extensions/s/40-0/${GS_VERSION}/" ${SRC_DIR}/sass/gnome-shell/_common-temp.scss
+  fi
 }
 
 theme_color() {
@@ -467,11 +450,6 @@ theme_color() {
 }
 
 theme_tweaks() {
-  if [[ "$accent" == 'true' || "$compact" == 'true' || "$nord" == 'true'  || "$rimless" == 'true' || "$blackness" == 'true' || "$darker" == 'true' || "$normal" = "true" ]]; then
-    tweaks='true'
-    install_package; tweaks_temp
-  fi
-
   if [[ "$accent" = "true" ]] ; then
     theme_color
   fi
@@ -511,7 +489,7 @@ install_theme() {
   done
 }
 
-install_theme
+install_package && sass_temp && gnome_shell_version && install_theme
 
 echo
 echo Done.
