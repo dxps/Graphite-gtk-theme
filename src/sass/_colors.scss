@@ -112,6 +112,27 @@
       @if ($type == 'g') { @return #3b4252; }
       @if ($type == 'h') { @return #434c5e; }
     }
+  }  
+  
+  // [dxps] An additional value for color_type.  
+  @else if ($color_type == 'gruvbox') {
+    @if ($type == 'a') { @return #f9fafb; }
+    @if ($type == 'b') { @return #f3f4f6; }
+    @if ($type == 'c') { @return #f0f1f4; }
+    @if ($type == 'd') { @return #c4c9d4; }
+
+      // [dxps] Using Gruvbox color scheme.
+    @if ($darker == 'true') {
+      @if ($type == 'e') { @return #1D2021; }
+      @if ($type == 'f') { @return #32302F; }
+      @if ($type == 'g') { @return #3B3837; }
+      @if ($type == 'h') { @return #423F3E; }
+    } @else {
+      @if ($type == 'e') { @return #1D2021; }
+      @if ($type == 'f') { @return #32302F; }
+      @if ($type == 'g') { @return #3B3837; }
+      @if ($type == 'h') { @return #423F3E; }
+    }
   } @else {
     @if ($type == 'a') { @return #FFFFFF; }
     @if ($type == 'b') { @return #FAFAFA; }

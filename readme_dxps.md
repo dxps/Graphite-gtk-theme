@@ -1,4 +1,4 @@
-## My Notes on Changes
+## My Change Notes applied to Original Theme
 
 - Using font size 11 for compact as well (in `src/sass/gnome-shell/_variables.scss`).
   ```scss
@@ -69,7 +69,16 @@
 
 <br/>
 
-### Changes & Apply
+## Gruvbox Color Type
+
+The default color type is set in `src/sass/_tweaks.css` file as `$color_type: 'gruvbox';`.
+This is done since `--tweaks` flag does not support multiple values.
+
+in `src/sass/_colors.scss` 
+
+<br/>
+
+## Changes & Apply
 
 - After doing changes, make sure you run `./parse-sass.sh` before installing it.<br/>
 
