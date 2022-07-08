@@ -5593,7 +5593,7 @@ popover.emoji-completion .emoji:hover {
 }
 
 .windowhandle .linked.nautilus-path-bar button:not(.suggested-action):not(.destructive-action).current-dir {
-  color: white;
+  color: #FFB74D;
 }
 
 .windowhandle .linked.nautilus-path-bar button:not(.suggested-action):not(.destructive-action).current-dir:hover, .windowhandle .linked.nautilus-path-bar button:not(.suggested-action):not(.destructive-action).current-dir:active {
@@ -6123,6 +6123,10 @@ tabbox {
   padding: 2px;
   margin: 2px;
   border-radius: 8px;
+}
+
+tabbox > tab:checked {
+  color: #FFB74D;
 }
 
 tabbox > tab button {

@@ -48,7 +48,7 @@ textview text {
 }
 
 textview border {
-  background-color: #FF0000;
+  background-color: #f3f4f6;
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -3513,7 +3513,7 @@ filechooserbutton:drop(active) {
  ***********/
 .sidebar {
   border-style: none;
-  background-color: #FF0000;
+  background-color: #f3f4f6;
 }
 
 .sidebar:not(separator):dir(ltr), .sidebar:not(separator).left, .sidebar:not(separator).left:dir(rtl) {
@@ -3537,7 +3537,7 @@ paned .sidebar.left, paned .sidebar.right, paned .sidebar.left:dir(rtl), paned .
 
 stacksidebar list {
   padding: 4px;
-  background-color: #FF0000;
+  background-color: #f3f4f6;
 }
 
 stacksidebar row {
@@ -4467,7 +4467,7 @@ text foreground color of insensitive widgets */
 @define-color insensitive_fg_color rgba(0, 0, 0, 0.38);
 /*
 insensitive text widgets and the like base background color */
-@define-color insensitive_base_color #FF0000;
+@define-color insensitive_base_color #f3f4f6;
 /*
 widget text/foreground color on backdrop windows */
 @define-color theme_unfocused_fg_color rgba(0, 0, 0, 0.87);

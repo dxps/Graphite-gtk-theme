@@ -165,7 +165,7 @@ textview text {
 }
 
 textview border {
-  background-color: #FF0000;
+  background-color: #f3f4f6;
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -1584,7 +1584,7 @@ entry progress {
 
 .gedit-search-slider .linked:not(.vertical) > entry:disabled {
   box-shadow: inset 0 0 0 2px transparent;
-  background-color: #FF0000;
+  background-color: #f3f4f6;
   color: rgba(0, 0, 0, 0.38);
 }
 
@@ -1603,7 +1603,7 @@ entry progress {
 
 .gedit-search-slider .linked:not(.vertical) > entry.error:disabled {
   box-shadow: inset 0 0 0 2px transparent;
-  background-color: #FF0000;
+  background-color: #f3f4f6;
   color: rgba(0, 0, 0, 0.38);
 }
 
@@ -1634,7 +1634,7 @@ entry progress {
 
 .gedit-search-slider .linked:not(.vertical) > entry.warning:disabled {
   box-shadow: inset 0 0 0 2px transparent;
-  background-color: #FF0000;
+  background-color: #f3f4f6;
   color: rgba(0, 0, 0, 0.38);
 }
 
@@ -2415,7 +2415,7 @@ toolbar:not(.inline-toolbar):not(.osd) switch {
   border-style: solid;
   border-width: 0 1px 1px;
   border-color: rgba(0, 0, 0, 0.12);
-  background-color: #FF0000;
+  background-color: #f3f4f6;
 }
 
 searchbar > revealer > box,
@@ -5593,7 +5593,7 @@ popover.emoji-completion .emoji:hover {
 }
 
 .windowhandle .linked.nautilus-path-bar button:not(.suggested-action):not(.destructive-action).current-dir {
-  color: rgba(0, 0, 0, 0.87);
+  color: #FFB74D;
 }
 
 .windowhandle .linked.nautilus-path-bar button:not(.suggested-action):not(.destructive-action).current-dir:hover, .windowhandle .linked.nautilus-path-bar button:not(.suggested-action):not(.destructive-action).current-dir:active {
@@ -5687,7 +5687,7 @@ dialog.background > box.dialog-vbox.vertical > grid.horizontal > box.horizontal:
 }
 
 .nautilus-window paned > separator {
-  background-color: #FF0000;
+  background-color: #f3f4f6;
 }
 
 /*********
@@ -5724,7 +5724,7 @@ window.org-gnome-gedit > overlay > box.vertical > paned.gedit-side-panel-paned s
 }
 
 .gedit-document-panel {
-  background-color: #FF0000;
+  background-color: #f3f4f6;
 }
 
 .gedit-document-panel row button.flat {
@@ -6125,6 +6125,10 @@ tabbox {
   border-radius: 8px;
 }
 
+tabbox > tab:checked {
+  color: #FFB74D;
+}
+
 tabbox > tab button {
   min-height: 24px;
   min-width: 24px;
@@ -6328,7 +6332,7 @@ entry.preferences-search {
 }
 
 preferences stacksidebar.sidebar list {
-  background-color: #FF0000;
+  background-color: #f3f4f6;
 }
 
 preferences stacksidebar.sidebar:dir(ltr) list, preferences stacksidebar.sidebar:dir(rtl) list {
@@ -6633,11 +6637,11 @@ overlay grid.horizontal > revealer > scrolledwindow.frame:dir(rtl) {
 }
 
 .side-panel .view, .side-panel filechooser stack.view scrolledwindow treeview.view, filechooser stack.view scrolledwindow .side-panel treeview.view, .side-panel window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .side-panel treeview.view:not(.progressbar):not(.trough) {
-  background-image: image(#FF0000);
+  background-image: image(#f3f4f6);
 }
 
 .side-panel .view:hover, .side-panel filechooser stack.view scrolledwindow treeview.view:hover, filechooser stack.view scrolledwindow .side-panel treeview.view:hover, .side-panel window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:hover:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .side-panel treeview.view:hover:not(.progressbar):not(.trough) {
-  background-image: image(rgba(239, 0, 0, 0.9896));
+  background-image: image(rgba(228, 229, 231, 0.9896));
 }
 
 .side-panel .view:selected, .side-panel filechooser stack.view scrolledwindow treeview.view:selected, filechooser stack.view scrolledwindow .side-panel treeview.view:selected, .side-panel window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:selected:not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .side-panel treeview.view:selected:not(.progressbar):not(.trough) {
@@ -6856,7 +6860,7 @@ box.dialog-vbox scrolledwindow.related {
 }
 
 list.categories {
-  background-image: image(#FF0000);
+  background-image: image(#f3f4f6);
 }
 
 /*********
@@ -7308,7 +7312,7 @@ tooltip.background.chromium {
 }
 
 #MozillaGtkWidget > widget > entry:disabled {
-  background-color: #FF0000;
+  background-color: #f3f4f6;
 }
 
 #MozillaGtkWidget > widget > button > button {
@@ -8919,7 +8923,7 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
 }
 
 .nemo-window .nemo-inactive-pane .view:not(:selected), .nemo-window .nemo-inactive-pane filechooser stack.view scrolledwindow treeview.view:not(:selected), filechooser stack.view scrolledwindow .nemo-window .nemo-inactive-pane treeview.view:not(:selected), .nemo-window .nemo-inactive-pane window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(:selected):not(.progressbar):not(.trough), window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .nemo-window .nemo-inactive-pane treeview.view:not(:selected):not(.progressbar):not(.trough) {
-  background-color: #FF0000;
+  background-color: #f3f4f6;
 }
 
 .nemo-window .nemo-window-pane widget.entry {
@@ -8967,7 +8971,7 @@ text foreground color of insensitive widgets */
 @define-color insensitive_fg_color rgba(0, 0, 0, 0.38);
 /*
 insensitive text widgets and the like base background color */
-@define-color insensitive_base_color #FF0000;
+@define-color insensitive_base_color #f3f4f6;
 /*
 widget text/foreground color on backdrop windows */
 @define-color theme_unfocused_fg_color rgba(0, 0, 0, 0.87);
