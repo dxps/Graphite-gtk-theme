@@ -116,10 +116,10 @@
   
   // [dxps] An additional value for color_type.  
   @else if ($color_type == 'gruvbox') {
-    @if ($type == 'a') { @return #f9fafb; }
-    @if ($type == 'b') { @return #f3f4f6; }
-    @if ($type == 'c') { @return #f0f1f4; }
-    @if ($type == 'd') { @return #c4c9d4; }
+    @if ($type == 'a') { @return #FFEACC; }
+    @if ($type == 'b') { @return #FFE5BF; }
+    @if ($type == 'c') { @return #FFDBA6; }
+    @if ($type == 'd') { @return #FFCC80; }
 
       // [dxps] Using Gruvbox color scheme.
     @if ($darker == 'true') {

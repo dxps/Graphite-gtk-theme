@@ -139,7 +139,7 @@
             }
 
             &:active, &:checked {
-              color: $orange-300;
+              color: $orange-200;
               background-color: $titlebar-divider;
             }
 
@@ -315,7 +315,7 @@
     margin-bottom: 0;
 
     &.current-dir {
-      color: $orange-300;
+      color: $orange-200;
 
       &:hover, &:active {
         background: none;
@@ -960,7 +960,7 @@ tabbox { // Gnome 40.0
     @extend %tabs_tab;
 
     &:checked {
-        color: $orange-300;
+        color: $orange-200;
     }
 
     // close button
